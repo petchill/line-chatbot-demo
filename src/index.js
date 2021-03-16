@@ -4,7 +4,7 @@ import { tap, take, mergeMap, retryWhen, map } from "rxjs/operators"
 import R from "ramda"
 import bodyParser from "body-parser"
 import axios from "axios"
-import { router as liffRouter } from './liffRouter'
+// import { router as liffRouter } from './liffRouter'
 const app = express()
 const channelToken = "pkiErMEWSLofSNCkAEjIJUOL10SpPbRbA426Cf3ESvFM1vbcVmbl5Db87V5KS/l3/YBDXdBd5AHVOKvBgDncKRmIek+dYNzQ8W6gGgOusUcIFH73rKdvVjrr6bD8tyd4YPtRRUYuhyH6d16Bi1W/wAdB04t89/1O/w1cDnyilFU="
 const lineReplyUrl = "https://api.line.me/v2/bot/message/reply"
@@ -105,7 +105,7 @@ app.post('/webhook/line', (req, res) => {
   res.send({})
 })
 
-app.use('/liff', liffRouter)
+// app.use('/liff', liffRouter)
 
 app.listen(port, () => console.log('app listening on port => ', port));
 
